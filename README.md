@@ -2,9 +2,12 @@
 ITIS6177 Final API Documentation
 Abstract
 The ITIS6177 Final API serves as a tool to extract text from PDF documents, using Azure Form Recognizer capabilities. This API provides endpoints for processing locally stored PDFs or files retrieved from external URLs. Designed with error handling and data sanitization, it ensures reliable performance and secure handling of sensitive data.
+
 Introduction
+
 With the growing need for automated document processing, the ITIS6177 Final API provides a streamlined way to extract structured text content from PDF files. By utilizing Azure's Form Recognizer service, the API offers high accuracy in text extraction while ensuring secure and efficient operations. This document outlines the API's functionality, implementation, and usage guidelines, providing a comprehensive reference for developers and users.
 Features and Capabilities
+
 The API includes the following features:
 Status Monitoring: A dedicated endpoint to verify the API's operational status.
 Local File Processing: Extract text from PDF files stored on the server.
@@ -19,6 +22,8 @@ The API architecture follows a client-server model:
 Client: Submits requests using curl, Postman, or other HTTP tools.
 Server: Processes requests and interacts with the Azure Form Recognizer API for text extraction.
 Azure Form Recognizer: Provides the backend service for document analysis.
+
+
 API Endpoints
 GET /status
 Purpose: Checks if the API is operational.
@@ -131,8 +136,10 @@ Validates the file path or URL.
 Processes the file locally or downloads it via extract-text-url.
 Sends the file to Azure Form Recognizer for text extraction.
 Returns extracted text to the client.
+
 Error Logging:
 Logs all errors for debugging and troubleshooting.
+
 PM2 Deployment:
 PM2 is used for process management. Start the server using:
 bash
@@ -140,6 +147,7 @@ Copy code
 pm2 start app.js
 Evaluation
 Testing
+
 The API has been tested using:
 Local PDFs stored in the my-project directory.
 Files downloaded from external URLs.
